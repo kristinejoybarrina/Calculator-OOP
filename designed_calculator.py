@@ -2,7 +2,6 @@
 from tkinter import *
 import pyfiglet
 
-
 # Create notice text that the program starts
 notice_text = pyfiglet.figlet_format("Calculator", font="slant")
 print("\033[1;31m" + notice_text)
@@ -10,15 +9,9 @@ print("\033[1;31m" + notice_text)
 # Define a function called First_Window
 class Design():
     
-    def __init__(self, addition, subtraction, multiplication, division):
-        self.addition
-        self.subtraction
-        self.multiplication
-        self.division
-    
     
     # Define function and create window for addition operation 
-    def addition():
+    def addition(self):
         addition_window = Tk()
         addition_window.title("Addition")
         addition_window.geometry("450x200")
@@ -31,24 +24,25 @@ class Design():
         # Create label for second input
         second_input_label = Label(addition_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
         second_input_label.grid(row=2, column=5, pady=15)
-        
-        # Create textbox for first input
+
+   
         first_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         first_input_textbox.grid(row=1, column=20)
-        
-        # Create textbox for second input
+
+            
+
+                    # Create textbox for first input
         second_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
-        
-        # Define function to apply addition operation
+
+
+
         def sum():
-            
-            # Use try-catch to show error inputs
+                    # Use try-catch to show error inputs
             try:
-                
-                total = (float(first_input_textbox.get()) + float(second_input_textbox.get()))
+                total = float(first_input_textbox) + float(second_input_textbox)
                 empty_label.config(fg="black", text="Total: " + str(total))
-                
+                        
             except ValueError:
                 empty_label.config(text="Please enter an integer!", fg="red") 
         
@@ -66,8 +60,12 @@ class Design():
         
         addition_window.mainloop()
         
+
+        
+
+        
     # Define function and create window for subtraction operation 
-    def subtraction():
+    def subtraction(self):
         subtraction_window = Tk()
         subtraction_window.title("Subtraction")
         subtraction_window.geometry("450x200")
@@ -117,7 +115,7 @@ class Design():
         
         
     # Define function and create window for multiplication operation 
-    def multiplication():
+    def multiplication(self):
         multiplication_window = Tk()
         multiplication_window.title("Multiplication")
         multiplication_window.geometry("450x200")
@@ -166,7 +164,7 @@ class Design():
         multiplication_window.mainloop()
 
     # Define function and create window for division operation 
-    def division():
+    def division(self):
         division_window = Tk()
         division_window.title("Division")
         division_window.geometry("450x200")
@@ -217,3 +215,14 @@ class Design():
         back_button.grid(row=5, column=50, sticky=W)
         
         division_window.mainloop()
+        
+
+
+        # Create textbox for second input
+
+        
+
+                
+        
+
+            

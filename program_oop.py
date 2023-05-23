@@ -6,4 +6,4 @@ from operations import Operations
 # Pseudocode
 
 # Call a class that will start the calculator program then print output
-Operations.calc_operation()
+Operations.calc_operation(self=print)
