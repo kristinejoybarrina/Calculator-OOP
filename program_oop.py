@@ -1,6 +1,7 @@
-# Kristine Joy Barrina # BSCPE 1-5
+# Kristine Joy Barrina # BSCPE 1-5 # May 24, 2023
 # Creating a calculator in an OOP way.
 
+# import operation file
 from operations import Operations
 
 # Pseudocode
