@@ -7,10 +7,11 @@ from calculator import Calculator
 notice_text = pyfiglet.figlet_format("Calculator", font="slant")
 print("\033[1;31m" + notice_text)
 
+# Create a class for designed calculator
 class Design:
+    
     def __init__(self):
         self.calculator = Calculator()
-    
     
     # Define function and create window for addition operation 
     def addition(self):
@@ -34,7 +35,8 @@ class Design:
         second_input_textbox.grid(row=2, column=20)
         
         def sum():
-                    # Use try-catch to show error inputs
+            
+            # Use try-catch to show error inputs
             try:
                 num1 = float(first_input_textbox.get())
                 num2 = float(second_input_textbox.get())
@@ -108,7 +110,6 @@ class Design:
         back_button.grid(row=5, column=50, sticky=W)
         
         subtraction_window.mainloop()
-        
         
     # Define function and create window for multiplication operation 
     def multiplication(self):
@@ -184,8 +185,6 @@ class Design:
         second_input_textbox = Entry(division_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
-        
-        
         # Define function to apply division operation
         def quotient():
             
@@ -215,10 +214,6 @@ class Design:
         back_button.grid(row=5, column=50, sticky=W)
         
         division_window.mainloop()
-        
-
-
-        # Create textbox for second input
 
         
 

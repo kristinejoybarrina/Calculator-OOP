@@ -2,7 +2,6 @@
 from tkinter import *
 from designed_calculator import Design
 
-
 class Operations:
     
     def calc_operation(self):
