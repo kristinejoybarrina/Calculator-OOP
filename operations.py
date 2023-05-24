@@ -20,21 +20,22 @@ class Operations:
         close_button = Button(root, text="Close", bg="red", fg="white", command=root.destroy)
         close_button.pack(side="bottom")
 
+        calculator = Design()
         
         # Create addition operation button
-        addition_button = Button(root, text="Addition", bg="black", fg="white", command=Design.addition())
+        addition_button = Button(root, text="Addition", bg="black", fg="white", command = calculator.addition)
         addition_button.pack()
         
         # Create subtraction operation button
-        subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command=Design.subtraction())
+        subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command= calculator.subtraction)
         subtraction_button.pack()
         
         # Create multiplication operation button
-        multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=Design.multiplication())
+        multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=calculator.multiplication)
         multiplication_button.pack()
 
         # Create division operation button
-        division_button = Button(root, text="Division", bg="black", fg="white", command=Design.division())
+        division_button = Button(root, text="Division", bg="black", fg="white", command=calculator.division)
         division_button.pack()
 
         root.mainloop()

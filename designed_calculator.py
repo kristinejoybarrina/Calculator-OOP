@@ -24,23 +24,17 @@ class Design():
         # Create label for second input
         second_input_label = Label(addition_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
         second_input_label.grid(row=2, column=5, pady=15)
-
-   
+        
         first_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         first_input_textbox.grid(row=1, column=20)
-
-            
-
-                    # Create textbox for first input
+        
         second_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
-
-
-
+        
         def sum():
                     # Use try-catch to show error inputs
             try:
-                total = float(first_input_textbox) + float(second_input_textbox)
+                total = float(first_input_textbox.get()) + float(second_input_textbox.get())
                 empty_label.config(fg="black", text="Total: " + str(total))
                         
             except ValueError:
@@ -59,10 +53,6 @@ class Design():
         back_button.grid(row=5, column=50, sticky=W)
         
         addition_window.mainloop()
-        
-
-        
-
         
     # Define function and create window for subtraction operation 
     def subtraction(self):
