@@ -1,13 +1,15 @@
 # import python module
 from tkinter import *
 import pyfiglet
+from calculator import Calculator
 
 # Create notice text that the program starts
 notice_text = pyfiglet.figlet_format("Calculator", font="slant")
 print("\033[1;31m" + notice_text)
 
-# Define a function called First_Window
-class Design():
+class Design:
+    def __init__(self):
+        self.calculator = Calculator()
     
     
     # Define function and create window for addition operation 
@@ -34,7 +36,9 @@ class Design():
         def sum():
                     # Use try-catch to show error inputs
             try:
-                total = float(first_input_textbox.get()) + float(second_input_textbox.get())
+                num1 = float(first_input_textbox.get())
+                num2 = float(second_input_textbox.get())
+                total = self.calculator.addition(num1, num2)
                 empty_label.config(fg="black", text="Total: " + str(total))
                         
             except ValueError:
@@ -83,7 +87,9 @@ class Design():
             # Use try-catch to show error inputs
             try:
                 
-                total = (float(first_input_textbox.get()) - float(second_input_textbox.get()))
+                num1 = float(first_input_textbox.get())
+                num2 = float(second_input_textbox.get())
+                total = self.calculator.subtraction(num1, num2)
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -133,7 +139,9 @@ class Design():
             # Use try-catch to show error inputs
             try:
                 
-                total = (float(first_input_textbox.get()) * float(second_input_textbox.get()))
+                num1 = float(first_input_textbox.get())
+                num2 = float(second_input_textbox.get())
+                total = self.calculator.multiplication(num1, num2)
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -183,7 +191,9 @@ class Design():
             
             # Use try-catch to show error inputs
             try:
-                total = (float(first_input_textbox.get()) / float(second_input_textbox.get()))
+                num1 = float(first_input_textbox.get())
+                num2 = float(second_input_textbox.get())
+                total = self.calculator.division(num1, num2)
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
