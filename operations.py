@@ -1,6 +1,7 @@
 
 from tkinter import *
 from designed_calculator import Design
+from designed_calc_inheritance import SquareRoot
 
 class Operations:
     
@@ -20,6 +21,7 @@ class Operations:
         close_button.pack(side="bottom")
 
         calculator = Design()
+        calculator = SquareRoot()
         
         # Create addition operation button
         addition_button = Button(root, text="Addition", bg="black", fg="white", command = calculator.addition)
@@ -36,6 +38,10 @@ class Operations:
         # Create division operation button
         division_button = Button(root, text="Division", bg="black", fg="white", command=calculator.division)
         division_button.pack()
-
+    
+        # Create square root operation button
+        sqrt_button = Button(root, text="Square Root", bg="black", fg="white", command=calculator.square_root)
+        sqrt_button.pack()
+        
         root.mainloop()
     
