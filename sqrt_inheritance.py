@@ -5,6 +5,6 @@ from calculator import Calculator
 
 class Calculator (Calculator):
     
-    def square_root(self, num1, num2):
-        square_root = math.sqrt (num1, num2)
+    def square_root(self, num1):
+        square_root = math.sqrt (num1)
         return square_root
